@@ -38,7 +38,7 @@ def start_vectors(parses_train_filepath, parses_dev_filepath, relations_train_fi
     print "Reading pre-trained word vectors..."
     m.intersect_word2vec_format(googlevecs_filepath, binary=True)
     print "Training segment vectors..."
-    for iter in range(1):#,21):
+    for iter in range(1,20):
         ## Training of word vectors
         m.alpha = 0.01/(2**iter)
         m.min_alpha = 0.01/(2**(iter+1))

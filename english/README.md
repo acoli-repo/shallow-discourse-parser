@@ -1,5 +1,5 @@
-Shallow Discourse Parser
-========================
+Shallow Discourse Parser for English
+====================================
 
 This repository hosts the shallow discourse parser described in: [Do We Really Need All Those Rich Linguistic Features? A Neural Network-Based Approach to Implicit Sense Labeling](http://www.conll.org/cfp-2016)
 
@@ -39,7 +39,7 @@ Please put the following data into the data/ directory:
 
 #### (1) Train a neural model with a given parameter setting
 
-$ python test_single.py [path to the train parses file] [path to the dev parses file] [path to the train relations file] [absolute path to the dev relations file] [path to the GoogleNews-vectors-negative300.bin file (binary)]
+$ python test_single.py [path to the train parses file] [path to the dev parses file] [path to the train relations file] [path to the dev relations file] [path to the GoogleNews-vectors-negative300.bin file (binary)]
 
 e.g. $ python test_single.py data/en-01-12-16-train/parses.json data/en-01-12-16-dev/parses.json data/en-01-12-16-train/relations.json data/en-01-12-16-dev/relations.json data/GoogleNews-vectors-negative300.bin
 
@@ -47,7 +47,7 @@ e.g. $ python test_single.py data/en-01-12-16-train/parses.json data/en-01-12-16
 
 (takes the same 5 input arguments as test_single.py does)
 
-$ python test_parameterSettings.py [absolute path to the train parses file (e.g. ~/data/en-01-12-16-train/parses.json)] [absolute path to the dev parses file] [absolute path to the train relations file (e.g. ~/data/en-01-12-16-dev/relations.json)] [absolute path to the dev relations file] [absolute path to the GoogleNews-vectors-negative300.bin file (binary)]
+$ python test_parameterSettings.py [path to the train parses file (e.g. data/en-01-12-16-train/parses.json)] [path to the dev parses file] [path to the train relations file (e.g. data/en-01-12-16-dev/relations.json)] [path to the dev relations file] [path to the GoogleNews-vectors-negative300.bin file (binary)]
 
 e.g. $ python test_parameterSettings.py data/en-01-12-16-train/parses.json data/en-01-12-16-dev/parses.json data/en-01-12-16-train/relations.json data/en-01-12-16-dev/relations.json data/GoogleNews-vectors-negative300.bin
 
@@ -56,7 +56,7 @@ e.g. $ python test_parameterSettings.py data/en-01-12-16-train/parses.json data/
 
 #### (3) Save the models for different paramter settings
 
-$ python test_parameterSettings_pickle.py [absolute path to the train parses file (e.g. ~/data/en-01-12-16-train/parses.json)] [absolute path to the dev parses file] [absolute path to the train relations file (e.g. ~/data/en-01-12-16-dev/relations.json)] [absolute path to the dev relations file] [absolute path to the GoogleNews-vectors-negative300.bin file (binary)]
+$ python test_parameterSettings_pickle.py [path to the train parses file (e.g. data/en-01-12-16-train/parses.json)] [path to the dev parses file] [path to the train relations file (e.g. data/en-01-12-16-dev/relations.json)] [path to the dev relations file] [path to the GoogleNews-vectors-negative300.bin file (binary)]
 
 e.g. $ python test_parameterSettings_pickle.py data/en-01-12-16-train/parses.json data/en-01-12-16-dev/parses.json data/en-01-12-16-train/relations.json data/en-01-12-16-dev/relations.json data/GoogleNews-vectors-negative300.bin
 
