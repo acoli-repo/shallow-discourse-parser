@@ -68,7 +68,7 @@ e.g. $ python test_parameterSettings_pickle.py data/en-01-12-16-train/parses.jso
 - To be able to identify which model gave which accuracy results, you can look into the file 'Results_pickle[date].csv'. The first two colums indicate the id of the word embedding model and the id of the which neural network models which belong to this word embedding model
 
 
-#### (3) Load a trained model and run the parser to classify implicit relations
+#### (4) Load a trained model and run the parser to classify implicit relations
 
 $ python re-classify-implicit_entrel_senses_nn.py [path to file of which implicit senses should be reclassified] [path to output of reclassification] [path to parses file]
 

@@ -49,7 +49,7 @@ e.g. $ python test_single.py data/zh-01-08-2016-train/parses.json data/zh-01-08-
 
 $ python test_parameterSettings.py [path to the train parses file (e.g. data/zh-01-08-2016-train/parses.json)] [path to the dev parses file] [path to the train relations file (e.g. data/zh-01-08-2016-train/relations.json)] [path to the dev relations file] [path to the zh-Gigaword-300.txt file (.txt)]
 
-#e.g. python test_parameterSettings.py data/zh-01-08-2016-train/parses.json data/zh-01-08-2016-dev/parses.json data/zh-01-08-2016-train/relations.json data/zh-01-08-2016-dev/relations.json data/zh-Gigaword-300.txt
+e.g. python test_parameterSettings.py data/zh-01-08-2016-train/parses.json data/zh-01-08-2016-dev/parses.json data/zh-01-08-2016-train/relations.json data/zh-01-08-2016-dev/relations.json data/zh-Gigaword-300.txt
 
 ! You can increase the number of values for the parameters in the code
 - The results for each parameter setting is saved to Results[date].csv
@@ -68,7 +68,7 @@ e.g. $ python test_parameterSettings_pickle.py data/zh-01-08-2016-train/parses.j
 - To be able to identify which model gave which accuracy results, you can look into the file 'Results_pickle[date].csv'. The first two colums indicate the id of the word embedding model and the id of the which neural network models which belong to this word embedding model
 
 
-#### (3) Load a trained model and run the parser to classify implicit relations
+#### (4) Load a trained model and run the parser to classify implicit relations
 
 $ python re-classify-implicit_entrel_senses_nn_chineses.py [path to file of which implicit senses should be reclassified] [path to output of reclassification] [path to parses file]
 
