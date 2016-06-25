@@ -41,14 +41,15 @@ Please put the following data into the data/ directory:
 
 $ python test_single.py [path to the train parses file] [path to the dev parses file] [path to the train relations file] [absolute path to the dev relations file] [path to the GoogleNews-vectors-negative300.bin file (binary)]
 
-e.g. python test_single.py data/en-01-12-16-train/parses.json data/en-01-12-16-dev/parses.json data/en-01-12-16-train/relations.json data/en-01-12-16-dev/relations.json data/GoogleNews-vectors-negative300.bin
+e.g. $ python test_single.py data/en-01-12-16-train/parses.json data/en-01-12-16-dev/parses.json data/en-01-12-16-train/relations.json data/en-01-12-16-dev/relations.json data/GoogleNews-vectors-negative300.bin
 
 #### (2) Train the neural network with different parameters to find an optimized setting
 
 (takes the same 5 input arguments as test_single.py does)
 
 $ python test_parameterSettings.py [absolute path to the train parses file (e.g. ~/data/en-01-12-16-train/parses.json)] [absolute path to the dev parses file] [absolute path to the train relations file (e.g. ~/data/en-01-12-16-dev/relations.json)] [absolute path to the dev relations file] [absolute path to the GoogleNews-vectors-negative300.bin file (binary)]
-e.g. python test_parameterSettings.py data/en-01-12-16-train/parses.json data/en-01-12-16-dev/parses.json data/en-01-12-16-train/relations.json data/en-01-12-16-dev/relations.json data/GoogleNews-vectors-negative300.bin
+
+e.g. $ python test_parameterSettings.py data/en-01-12-16-train/parses.json data/en-01-12-16-dev/parses.json data/en-01-12-16-train/relations.json data/en-01-12-16-dev/relations.json data/GoogleNews-vectors-negative300.bin
 
 ! You can increase the number of values for the parameters in the code, see the lines 25-43
 - The results for each parameter setting is saved to Results[date].csv
@@ -57,7 +58,7 @@ e.g. python test_parameterSettings.py data/en-01-12-16-train/parses.json data/en
 
 $ python test_parameterSettings_pickle.py [absolute path to the train parses file (e.g. ~/data/en-01-12-16-train/parses.json)] [absolute path to the dev parses file] [absolute path to the train relations file (e.g. ~/data/en-01-12-16-dev/relations.json)] [absolute path to the dev relations file] [absolute path to the GoogleNews-vectors-negative300.bin file (binary)]
 
-e.g. python test_parameterSettings_pickle.py data/en-01-12-16-train/parses.json data/en-01-12-16-dev/parses.json data/en-01-12-16-train/relations.json data/en-01-12-16-dev/relations.json data/GoogleNews-vectors-negative300.bin
+e.g. $ python test_parameterSettings_pickle.py data/en-01-12-16-train/parses.json data/en-01-12-16-dev/parses.json data/en-01-12-16-train/relations.json data/en-01-12-16-dev/relations.json data/GoogleNews-vectors-negative300.bin
 
 - Running this script will save the model files to a pickles/ directory
 - You can choose the parameter setting for which you want to save the models, changing the parameter list at line 7.
@@ -71,7 +72,7 @@ e.g. python test_parameterSettings_pickle.py data/en-01-12-16-train/parses.json 
 
 $ python re-classify-implicit_entrel_senses_nn.py [path to file of which implicit senses should be reclassified] [path to output of reclassification] [path to parses file]
 
-e.g. python re-classify-implicit_entrel_senses_nn.py output_combined.json output_final.json data/en-01-12-16-dev/parses.json
+e.g. $ python re-classify-implicit_entrel_senses_nn.py output_combined.json output_final.json data/en-01-12-16-dev/parses.json
 
 - Once you have trained the model you wish to use for classifying the implicit relations, you have to move the three model files to the current working directory.
 - You have to rename your models "m_best.pickle", "neuralnetwork_best.pickle" and "label_subst_best.pickle".
