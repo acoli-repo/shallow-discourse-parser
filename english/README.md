@@ -40,6 +40,7 @@ Please put the following data into the data/ directory:
 #### (1) Train a neural model with a given parameter setting
 
 $ python test_single.py [path to the train parses file] [path to the dev parses file] [path to the train relations file] [absolute path to the dev relations file] [path to the GoogleNews-vectors-negative300.bin file (binary)]
+
 e.g. python test_single.py data/en-01-12-16-train/parses.json data/en-01-12-16-dev/parses.json data/en-01-12-16-train/relations.json data/en-01-12-16-dev/relations.json data/GoogleNews-vectors-negative300.bin
 
 #### (2) Train the neural network with different parameters to find an optimized setting
@@ -55,6 +56,7 @@ e.g. python test_parameterSettings.py data/en-01-12-16-train/parses.json data/en
 #### (3) Save the models for different paramter settings
 
 $ python test_parameterSettings_pickle.py [absolute path to the train parses file (e.g. ~/data/en-01-12-16-train/parses.json)] [absolute path to the dev parses file] [absolute path to the train relations file (e.g. ~/data/en-01-12-16-dev/relations.json)] [absolute path to the dev relations file] [absolute path to the GoogleNews-vectors-negative300.bin file (binary)]
+
 e.g. python test_parameterSettings_pickle.py data/en-01-12-16-train/parses.json data/en-01-12-16-dev/parses.json data/en-01-12-16-train/relations.json data/en-01-12-16-dev/relations.json data/GoogleNews-vectors-negative300.bin
 
 - Running this script will save the model files to a pickles/ directory
@@ -68,6 +70,7 @@ e.g. python test_parameterSettings_pickle.py data/en-01-12-16-train/parses.json 
 #### (3) Load a trained model and run the parser to classify implicit relations
 
 $ python re-classify-implicit_entrel_senses_nn.py [path to file of which implicit senses should be reclassified] [path to output of reclassification] [path to parses file]
+
 e.g. python re-classify-implicit_entrel_senses_nn.py output_combined.json output_final.json data/en-01-12-16-dev/parses.json
 
 - Once you have trained the model you wish to use for classifying the implicit relations, you have to move the three model files to the current working directory.
