@@ -65,7 +65,7 @@ e.g. $ python test_parameterSettings_pickle.py data/en-01-12-16-train/parses.jso
 - There are three files for each trained neural network: m_x.py , neuralnetwork_x_y_.save and label_subst_x_y_.py.
 - m_x.py is the model vor the word embeddings which the neural network uses; neuralnetwork_x_y_.save is the neural network and label_subst_x_y_.py is a substitution dictionary for relation labels to integers
 - For each word_embedding model, we train a the neural network with a certain parameter setting five times, that is why there are 5 neuralnetwork_x_y_.save and label_subst_x_y_.py for each m_x.py
-- To be able to identify which model gave which accuracy results, you can look into the file 'Results_pickle[date].csv'. The first two colums indicate the id of the word embedding model and the id of the which neural network models which belong to this word embedding model
+- To be able to identify which model gave which accuracy results, you can look into the file 'Results_pickle[date].csv'. The first two colums indicate the id of the word embedding model and the id of the neural network models belonging to this word embedding model
 
 
 #### (4) Load a trained model and run the parser to classify implicit relations
