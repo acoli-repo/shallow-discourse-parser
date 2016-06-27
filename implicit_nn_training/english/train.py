@@ -18,8 +18,8 @@ def start_vectors(parses_train_filepath, parses_dev_filepath, relations_train_fi
     mean = (lambda x: sum(x)/float(len(x)))
     logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
     # Initalize semantic model (with None data)
-    m = gensim.models.Word2Vec(None, size=300, window=8, min_count=3, workers=4, negative=5*0)
-    #m = gensim.models.Doc2Vec(None, size=300, window=8, min_count=3, workers=4, negative=5*0)
+    m = gensim.models.Word2Vec(None, size=300, window=8, min_count=3, workers=4)
+    #m = gensim.models.Doc2Vec(None, size=300, window=8, min_count=3, workers=4)
     print "Reading data..."
     # Load parse file
     parses = json.load(open(parses_train_filepath))

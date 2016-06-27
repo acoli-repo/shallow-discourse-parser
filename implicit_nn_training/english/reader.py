@@ -41,7 +41,6 @@ def read_file(filename, parses):
 
 def read_file_Org(filename, parses):
     """ Read relation data from JSON """
-    """ Read relation data from JSON """
     relations = []
     all_relations = []
     for row in open(filename):
