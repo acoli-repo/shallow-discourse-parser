@@ -77,4 +77,3 @@ e.g. $ python re-classify-implicit_entrel_senses_nn_chineses.py input_to_be_recl
 - Once you have trained the model you wish to use for classifying the implicit relations, you have to move the three model files to the current working directory.
 - You have to rename your models "m_best.pickle", "neuralnetwork_best.pickle" and "label_subst_best.pickle".
 - We included our model files here, so you can first test the relcassification with our models. 
-- An example of a file whose implicit senses should be reclassified is "input_to_be_reclassified_for_implicit_senses.json".
