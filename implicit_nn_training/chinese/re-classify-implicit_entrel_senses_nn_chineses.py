@@ -125,7 +125,6 @@ def test(inputfile, outputfile, parses_file):
     file_to_delete = inputfile_org.split(".json")[0]+"_modifiedTokenList.json"
     if os.path.isfile(file_to_delete):
         os.remove(file_to_delete)
-    print(counter_exp)
 
 if __name__ == "__main__":
     test(sys.argv[1], sys.argv[2], sys.argv[3])

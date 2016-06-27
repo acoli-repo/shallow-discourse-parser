@@ -4,7 +4,7 @@ Shallow Discourse Parser for Chinese
 This repository hosts the shallow discourse parser described in: [Do We Really Need All Those Rich Linguistic Features? A Neural Network-Based Approach to Implicit Sense Labeling](http://www.conll.org/cfp-2016)
 
 @inproceedings{schenk-EtAl:2016:CoNLL-STSDP,
-  author    = {Niko Schenk, Christian Chiarcos, Kathrin Donandt, Samuel Rönnqvist, Evgeny A. Stepanov,  Giuseppe Riccardi},
+  author    = {Niko Schenk, Christian Chiarcos, Samuel Rönnqvist, Kathrin Donandt, Evgeny A. Stepanov,  Giuseppe Riccardi},
   title     = {{Do We Really Need All Those Rich Linguistic Features? A Neural Network-Based Approach to Implicit Sense Labeling}},
   booktitle = {Proceedings of the Twentieth Conference on Computational Natural Language Learning - Shared Task, CoNLL 2016},
   month     = {August},
@@ -72,7 +72,7 @@ e.g. $ python test_parameterSettings_pickle.py data/zh-01-08-2016-train/parses.j
 
 $ python re-classify-implicit_entrel_senses_nn_chineses.py [path to file of which implicit senses should be reclassified] [path to output of reclassification] [path to parses file]
 
-e.g. $ python re-classify-implicit_entrel_senses_nn_chineses.py output_explicit.json output_final.json data/zh-01-08-2016-dev/parses.json
+e.g. $ python re-classify-implicit_entrel_senses_nn_chineses.py input_to_be_reclassified_for_implicit_senses.json output_final.json data/zh-01-08-2016-dev/parses.json
 
 - Once you have trained the model you wish to use for classifying the implicit relations, you have to move the three model files to the current working directory.
 - You have to rename your models "m_best.pickle", "neuralnetwork_best.pickle" and "label_subst_best.pickle".
