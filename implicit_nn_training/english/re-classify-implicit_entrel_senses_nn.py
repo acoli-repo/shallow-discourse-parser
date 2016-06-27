@@ -129,4 +129,4 @@ def test(inputfile, outputfile, parses_file):
 if __name__ == "__main__":
     test(sys.argv[1], sys.argv[2], sys.argv[3])
 
-#e.g. python re-classify-implicit_entrel_senses_nn.py output_combined.json output_final.json data/en-01-12-16-dev/parses.json
+#e.g. python re-classify-implicit_entrel_senses_nn.py input_to_be_reclassified_for_implicit_senses.json output_final.json data/en-01-12-16-dev/parses.json
