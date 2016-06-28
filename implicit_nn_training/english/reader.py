@@ -48,7 +48,7 @@ def read_file_Org(filename, parses):
         doc = parses[rel['DocID']]#get all data in pdtb-parses.json file to the same wsj document
         arg1 = get_token_depths_Org(rel['Arg1'], doc)#of the data for Arg1/2 we only need TokenList in get_token_depth function!
         arg2 = get_token_depths_Org(rel['Arg2'], doc)
-        context = get_context_Org(rel, doc, context_size=1)
+        context = None #get_context_Org(rel, doc, context_size=1)
         # Use for word vector training
         all_relations.append((rel['Sense'], arg1, arg2))
         if rel['Type'] not in ['Implicit', 'EntRel']:
@@ -83,7 +83,7 @@ def read_file_noSenses(filename, parses):
         doc = parses[rel['DocID']]
         arg1 = get_token_depths_Org(rel['Arg1'], doc)
         arg2 = get_token_depths_Org(rel['Arg2'], doc)
-        context = get_context_Org(rel, doc, context_size=1)
+        context = None #get_context_Org(rel, doc, context_size=1)
         # Use for word vector training
         all_relations.append((rel['Sense'], arg1, arg2))
         if rel["Connective"]["TokenList"] == []:

@@ -51,16 +51,6 @@ def start_vectors(counter, parses_train_filepath, parses_dev_filepath, relations
     (input_train, output_train) = convert_relations(relations_train, label_subst, m)
     (input_dev, output_dev) = convert_relations(relations_dev, label_subst, m)
 
-    """
-    # Compile relation features from document vectors
-    inputs_all, outputs_all = convert_relations_docvec(relations, label_subst, m)
-    inputs_train = inputs_all[:len(relations_train)]
-    inputs_dev = inputs_all[len(relations_train):]
-    outputs_train = outputs_all[:len(relations_train)]  
-    outputs_dev = outputs_all[len(relations_train):]
-    save_vectors("segvecs_avgplusprod_context_avg.txt", input_train, output_train, label_subst)
-    save_vectors("segvecs_avgplusprod_context_avg_dev.txt", input_dev, output_dev, label_subst)
-    """
 
     return input_train, output_train, input_dev, output_dev, label_subst
 
@@ -209,7 +199,7 @@ def traverse(tree, node='ROOT-0', depth=0):
 
 
 def save_vectors(filename, inputs, outputs, label_subst):
-    """ Export Ã…Âµvector features to text file """
+    """ Export vector features to text file """
     lookup = dict([(y,x) for x,y in label_subst.items()])
     f = open(filename, "w")
     for input, output in zip(inputs, outputs):
@@ -226,7 +216,7 @@ def read_file(filename, parses):
         doc = parses[rel['DocID']]
         arg1 = get_token_depths(rel['Arg1'], doc)
         arg2 = get_token_depths(rel['Arg2'], doc)
-        context = get_context(rel, doc, context_size=1)
+        context = None #get_context(rel, doc, context_size=1)
         # Use for word vector training
         all_relations.append((rel['Sense'], arg1, arg2))
         # Use for prediction (implicit relations only)

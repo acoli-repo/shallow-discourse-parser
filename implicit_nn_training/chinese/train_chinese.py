@@ -86,7 +86,7 @@ def get_token_depths(arg, doc):
 
 
 def save_vectors(filename, inputs, outputs):
-    """ Export ŵvector features to text file """
+    """ Export vector features to text file """
     lookup = dict([(y,x) for x,y in label_subst.items()])
     f = open(filename, "w")
     for input, output in zip(inputs, outputs):
@@ -103,7 +103,7 @@ def read_file(filename, parses):
         doc = parses[rel['DocID']]
         arg1 = get_token_depths(rel['Arg1'], doc)
         arg2 = get_token_depths(rel['Arg2'], doc)
-        context = get_context(rel, doc, context_size=1)
+        #context = get_context(rel, doc, context_size=1)
         # Use for word vector training
         all_relations.append((rel['Sense'], arg1, arg2))
         if rel['Type'] not in ['Implicit', 'EntRel']:#, 'AltLex']':
@@ -118,7 +118,7 @@ def get_context(rel, doc, context_size=2):
     pretext, posttext = [], []
     for context_i in reversed(range(context_size+1)):
         try:
-            sent_i, _ = rel['Arg1']['TokenList'][0]#get sentence ID of the sentence (in everi token-sublist its the same)
+            sent_i, _ = rel['Arg1']['TokenList'][0] #get sentence ID
             for token_i, token in enumerate(doc['sentences'][sent_i-context_i]['words']):
                 token, _ = token
                 if context_i == 0 and token_i >= rel['Arg1']['TokenList'][0][-1]:
@@ -218,7 +218,7 @@ def read_file_Org(filename, parses):
         doc = parses[rel['DocID']]
         arg1 = get_token_depths_Org(rel['Arg1'], doc)
         arg2 = get_token_depths_Org(rel['Arg2'], doc)
-        context = get_context_Org(rel, doc, context_size=1)
+        context = None #get_context_Org(rel, doc, context_size=1)
         # Use for word vector training
         all_relations.append((rel['Sense'], arg1, arg2))
         if rel['Type'] not in ['Implicit', 'EntRel']:
@@ -279,7 +279,7 @@ def read_file_noSenses(filename, parses):
         doc = parses[rel['DocID']]
         arg1 = get_token_depths_Org(rel['Arg1'], doc)
         arg2 = get_token_depths_Org(rel['Arg2'], doc)
-        context = get_context_Org(rel, doc, context_size=1)
+        context = None #get_context_Org(rel, doc, context_size=1)
         # Use for word vector training
         all_relations.append((rel['Sense'], arg1, arg2))
         if rel["Connective"]["TokenList"] == []:
@@ -409,7 +409,7 @@ def train_theanet(method, learning_rate, momentum, decay, regularization, hidden
     valid_acc = accuracy_score(exp.network.predict(valid_data[0]),valid_data[1])
     valid_accs.append(valid_acc)
     return np.average(accs), np.average(valid_accs), np.average(train_accs), label_subst, exp.network.predict(test_data[0])
-   
+
 
 
 
@@ -452,8 +452,3 @@ def start_vectors(parses_train_filepath, parses_dev_filepath, relations_train_fi
     return input_train, output_train, input_dev, output_dev, label_subst
 
 
-    
-"""
-save_vectors("segvecs_avgplusprod_context_avg.txt", inputs_train, outputs_train)
-save_vectors("segvecs_avgplusprod_context_avg_dev.txt", inputs_dev, outputs_dev)
-"""

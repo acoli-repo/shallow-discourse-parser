@@ -229,7 +229,7 @@ def read_file(filename, parses):
         doc = parses[rel['DocID']]
         arg1 = get_token_depths(rel['Arg1'], doc)
         arg2 = get_token_depths(rel['Arg2'], doc)
-        context = get_context(rel, doc, context_size=1)
+        context = None #get_context(rel, doc, context_size=1)
         # Use for word vector training
         all_relations.append((rel['Sense'], arg1, arg2))
         if rel['Type'] not in ['Implicit', 'EntRel']:#, 'AltLex']':
@@ -244,7 +244,7 @@ def get_context(rel, doc, context_size=2):
     pretext, posttext = [], []
     for context_i in reversed(range(context_size+1)):
         try:
-            sent_i, _ = rel['Arg1']['TokenList'][0]#get sentence ID of the sentence (in everi token-sublist its the same)
+            sent_i, _ = rel['Arg1']['TokenList'][0] #get sentence ID
             for token_i, token in enumerate(doc['sentences'][sent_i-context_i]['words']):
                 token, _ = token
                 if context_i == 0 and token_i >= rel['Arg1']['TokenList'][0][-1]:
@@ -344,7 +344,7 @@ def read_file_Org(filename, parses):
         doc = parses[rel['DocID']]
         arg1 = get_token_depths_Org(rel['Arg1'], doc)
         arg2 = get_token_depths_Org(rel['Arg2'], doc)
-        context = get_context_Org(rel, doc, context_size=1)
+        context = None #get_context_Org(rel, doc, context_size=1)
         # Use for word vector training
         all_relations.append((rel['Sense'], arg1, arg2))
         if rel['Type'] not in ['Implicit', 'EntRel']:
@@ -405,7 +405,7 @@ def read_file_noSenses(filename, parses):
         doc = parses[rel['DocID']]
         arg1 = get_token_depths_Org(rel['Arg1'], doc)
         arg2 = get_token_depths_Org(rel['Arg2'], doc)
-        context = get_context_Org(rel, doc, context_size=1)
+        context = None #get_context_Org(rel, doc, context_size=1)
         # Use for word vector training
         all_relations.append((rel['Sense'], arg1, arg2))
         if rel["Connective"]["TokenList"] == []:
