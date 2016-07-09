@@ -1,7 +1,7 @@
 The Frankfurt Shallow Discourse Parser
 ====================================
 
-Developed at the Applied Computational Linguistics Lab (ACoLi), Goethe University Frankfurt.
+Developed at the Applied Computational Linguistics Lab (ACoLi), Goethe University Frankfurt am Main, Germany.
 
 This repository hosts the shallow discourse parser described in: [Do We Really Need All Those Rich Linguistic Features? A Neural Network-Based Approach to Implicit Sense Labeling](http://www.conll.org/cfp-2016)
 
@@ -22,7 +22,7 @@ Niko Schenk, Christian Chiarcos, Samuel Rönnqvist, Kathrin Donandt, Evgeny A. S
 
 ## Software Requirements
 
-The parser runs on a Linux Environment.
+The parser runs on a Linux environment.
 
 Please install the following prerequisites in the given order:
 - python 2.7
@@ -33,9 +33,9 @@ Please install the following prerequisites in the given order:
 
 ## Data Requirements
 
-Please put the following data into the data/ directory:
+Please copy the following data into the data/ directory:
 
-- Penn Discourse TreeBank (PDTB) 2.0, a 1-million-word Wall Street Journal corpus; there is a train directory and a dev directory (named en-01-12-16-train/ and en-01-12-16-dev/). They have to have the parses and relations file (normally named pdtb-parses.json/pdtb-relations.json or parses.json/relations.json) (http://www.cs.brandeis.edu/~clp/conll16st/rules.html). Put these two directories into the data/ directory 
+- Penn Discourse TreeBank (PDTB) 2.0, a 1-million-word Wall Street Journal corpus; there is a train directory and a dev directory (named en-01-12-16-train/ and en-01-12-16-dev/, respectively). They have to include the parses and relations files (normally called pdtb-parses.json/pdtb-relations.json or parses.json/relations.json) (http://www.cs.brandeis.edu/~clp/conll16st/rules.html). Simply, place these two folders into the data/ directory.
 - GoogleNews-vectors-negative300 (https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?pref=2&pli=1)
 
 
