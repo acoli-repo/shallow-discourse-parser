@@ -1,4 +1,4 @@
-Frankfurt Shallow Discourse Parser
+The Frankfurt Shallow Discourse Parser
 ====================================
 
 Developed at the Applied Computational Linguistics Lab (ACoLi), Goethe University Frankfurt.
