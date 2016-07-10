@@ -29,7 +29,9 @@ Please install the following prerequisites in the given order:
 - cython (http://docs.cython.org/src/quickstart/install.html)
 - gensim (https://radimrehurek.com/gensim/install.html)
 - theanets (https://pypi.python.org/pypi/theanets)
-
+Probably you might have to install also:
+- pip install nose-parameterized
+- pip install -U scikit-learn
 
 ## Data Requirements
 
