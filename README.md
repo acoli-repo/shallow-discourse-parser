@@ -22,16 +22,33 @@ Niko Schenk, Christian Chiarcos, Samuel Rönnqvist, Kathrin Donandt, Evgeny A. S
 
 ## Software Requirements
 
-The parser runs on a Linux environment.
+The parser runs on a Linux environment using Python 2.7.
 
 Please install the following prerequisites in the given order:
-- python 2.7
-- cython (http://docs.cython.org/src/quickstart/install.html)
-- gensim (https://radimrehurek.com/gensim/install.html)
-- theanets (https://pypi.python.org/pypi/theanets)
-Probably you might have to install also:
-- pip install nose-parameterized
-- pip install -U scikit-learn
+$ pip install Cython 
+$ pip install --upgrade gensim
+$ pip install theanets
+$ pip install nose-parameterized
+$ pip install -U scikit-learn
+
+
+If you encounter issues with the numpy version, you can install all the software on a virtual environment (http://docs.python-guide.org/en/latest/dev/virtualenvs/):
+
+$ pip install virtualenv
+$ cd shallow-discourse-parser
+$ virtualenv venv
+$ source venv/bin/activate
+$ pip install Cython
+$ pip install --upgrade gensim
+$ pip install theanets
+$ pip install nose-parameterized
+$ pip install -U scikit-learn
+
+
+
+
+
+
 
 ## Data Requirements
 
