@@ -3,6 +3,7 @@ Shallow Discourse Parser for Chinese
 
 This repository hosts the shallow discourse parser described in: [Do We Really Need All Those Rich Linguistic Features? A Neural Network-Based Approach to Implicit Sense Labeling](http://www.conll.org/cfp-2016)
 
+```
 @inproceedings{schenk-EtAl:2016:CoNLL-STSDP,
   author    = {Niko Schenk, Christian Chiarcos, Samuel Rönnqvist, Kathrin Donandt, Evgeny A. Stepanov,  Giuseppe Riccardi},
   title     = {{Do We Really Need All Those Rich Linguistic Features? A Neural Network-Based Approach to Implicit Sense Labeling}},
@@ -12,18 +13,8 @@ This repository hosts the shallow discourse parser described in: [Do We Really N
   address   = {Berlin, Germany},
   publisher = {Association for Computational Linguistics}
 }
+```
 
-
-
-## Software Requirements
-
-The parser runs on a Linux Environment.
-
-Please install the following prerequisites in the given order:
-- python 2.7
-- cython (http://docs.cython.org/src/quickstart/install.html)
-- gensim (https://radimrehurek.com/gensim/install.html)
-- theanets (https://pypi.python.org/pypi/theanets)
 
 
 ## Data Requirements

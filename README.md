@@ -54,7 +54,14 @@ $ pip install -U scikit-learn
 
 Please copy the following data into the data/ directory:
 
+For English:
+
 - Penn Discourse TreeBank (PDTB) 2.0, a 1-million-word Wall Street Journal corpus; there is a train directory and a dev directory (named en-01-12-16-train/ and en-01-12-16-dev/, respectively). They have to include the parses and relations files (normally called pdtb-parses.json/pdtb-relations.json or parses.json/relations.json) (http://www.cs.brandeis.edu/~clp/conll16st/rules.html). Simply, place these two folders into the data/ directory.
 - GoogleNews-vectors-negative300 (https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit?pref=2&pli=1)
 
+
+For Chinese:
+
+- Chinese Discourse Treebank (CDTB) (http://www.cs.brandeis.edu/~clp/conll16st/rules.html); there is a train directory and a dev directory (named zh-01-08-2016-train/ $
+- zh-Gigaword-300.txt (http://www.cs.brandeis.edu/~clp/conll16st/data/zh-Gigaword-300.txt)
 
