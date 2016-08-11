@@ -3,7 +3,7 @@ The Frankfurt Shallow Discourse Parser
 
 Developed at the Applied Computational Linguistics Lab (ACoLi), Goethe University Frankfurt am Main, Germany.
 
-This repository hosts the shallow discourse parser described in: [Do We Really Need All Those Rich Linguistic Features? A Neural Network-Based Approach to Implicit Sense Labeling](http://www.conll.org/cfp-2016)
+This repository hosts the shallow discourse parser described in: [Do We Really Need All Those Rich Linguistic Features? A Neural Network-Based Approach to Implicit Sense Labeling](http://www.aclweb.org/anthology/K/K16/K16-2.pdf#page=51)
 
 Niko Schenk, Christian Chiarcos, Samuel Rönnqvist, Kathrin Donandt, Evgeny A. Stepanov and Giuseppe Riccardi. "Do We Really Need All Those Rich Linguistic Features? A Neural Network-Based Approach to Implicit Sense Labeling". In *Proceedings of the Twentieth Conference on Computational Natural Language Learning - Shared Task, CoNLL 2016*. 2016.
 
