@@ -61,9 +61,12 @@ e.g. $ python test_parameterSettings_pickle.py data/zh-01-08-2016-train/parses.j
 
 #### (4) Load a trained model and run the parser to classify implicit relations
 ```
-$ python re-classify-implicit_entrel_senses_nn_chineses.py [path to file of which implicit senses should be reclassified] [path to output of reclassification] [path to parses file]
+$ python re-classify-implicit_entrel_senses_nn_chineses.py 
+  [path to file for which implicit senses should be labeled]
+  [path to output of reclassification] 
+  [path to parses file]
 ```
-e.g. $ python re-classify-implicit_entrel_senses_nn_chineses.py input_to_be_reclassified_for_implicit_senses.json output_final.json data/zh-01-08-2016-dev/parses.json
+e.g. $ python implicit_nn_training/chinese/re-classify-implicit_entrel_senses_nn_chineses.py implicit_nn_training/chinese/data/conll16st-zh-01-08-2016-dev/relations-no-senses.json output-parsed.json implicit_nn_training/chinese/data/conll16st-zh-01-08-2016-dev/parses.json
 
 - Once you have trained the model you wish to use for classifying the implicit relations, you have to move the three model files to the current working directory.
 - You have to rename your models "m_best.pickle", "neuralnetwork_best.pickle" and "label_subst_best.pickle".
